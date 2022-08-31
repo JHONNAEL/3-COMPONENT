@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+body {
+  font-size: 0.9375rem;
+  color: var(--Transparent-white);
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--Transparent-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  list-style-type: none;
+  margin: 5rem 3rem 3rem 3rem;
+}
+
+.heading {
+  color: var(--Very-light-gray);
+  margin: 1.5rem 0;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+
+.cards {
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+img {
+  width: 3.5rem;
+  display: block;
+  margin: 1rem 0;
+}
+
+.cards:first-child {
+  background: var(--Bright-orange);
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.cards:nth-child(2) {
+  background: var(--Dark-cyan);
+}
+
+.cards:nth-child(3) {
+  background: var(--Very-dark-cyan);
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.btn {
+  text-decoration: none;
+  background: var(--Very-light-gray);
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  /* margin-bottom: 0.5rem; */
+  border: 0.1rem solid var(--Very-light-gray);
+  text-align: center;
+  transition: background, 0.5s ease-in;
+}
+
+.ads {
+  margin-bottom: 2rem;
+}
+
+.cards:first-child a {
+  color: var(--Bright-orange);
+}
+
+.cards:nth-child(2) a {
+  color: var(--Dark-cyan);
+}
+
+.cards:nth-child(3) a {
+  color: var(--Very-dark-cyan);
+}
+
+.cards:first-child a:active,
+.cards:first-child a:hover {
+  background: var(--Bright-orange);
+  color: var(--Very-light-gray);
+  /* mix-blend-mode: darken; */
+  
+  border: 0.1rem solid var(--Very-light-gray);
+}
+
+.cards:nth-child(2) a:active,
+.cards:nth-child(2) a:hover {
+  background: var(--Dark-cyan);
+  color: var(--Very-light-gray);
+  /* mix-blend-mode: darken; */
+  
+  border: 0.1rem solid var(--Very-light-gray);
+}
+
+.cards:nth-child(3) a:active,
+.cards:nth-child(3) a:hover {
+  background: var(--Very-dark-cyan);
+  color: var(--Very-light-gray);
+  /* mix-blend-mode: darken; */
+  
+  border: 0.1rem solid var(--Very-light-gray);
+}
+
+.attribution {
+  margin-bottom: 1rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--Very-dark-cyan);
+  padding: 0 1rem;
+}
+
+.attribution a {
+  color: var(--Very-dark-cyan);
+}
+
+@media screen and (min-width: 769px) {
+
+  .card-container {
+    display: flex;
+  }
+
+  .heading {
+    /* font-size: 2rem; */
+
+  }
+
+  .ads {
+    margin-bottom: 4rem;
+  }
+
+  .btn {
+    margin: auto 0 1rem 0;
+  }
+
+  .cards:first-child {
+    border-radius: 0.4rem 0 0 0.4rem;
+  }
+  
+  .cards:nth-child(3) {
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+}
